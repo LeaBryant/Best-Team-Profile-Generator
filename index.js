@@ -1,7 +1,13 @@
+//Packages
 const inquirer = require("inquirer");
 const fs = require("fs");
 //const generateHTML = require("./generateHTML")
-const path = require("path")
+const path = require("path");
+const Employee = require("./lib/Employee");
+const Manager = require("./lib/Manager");
+const Engineer = require("./lib/Engineer");
+const Intern = require("./lib/Intern");
+
 
 const validation = (input) => {
     if (input !== "") {
@@ -104,17 +110,39 @@ function buildTeam() {
 
 }
 
+function addEngineer() {
+    inquirer
+        .prompt(engineerQuestions).then((answers) => {
+            menu()
+
+        })
+}
+
+function addIntern() {
+    inquirer
+        .prompt(internQuestions).then((answers) => {
+            menu()
+        })
+}
+
+function generateHTML() {
+
+}
+
 function menu() {
     inquirer.prompt(menuQuestion).then((answer) => {
         switch (answer.teamMember) {
             case 'add a engineer':
-            console.log("chose an engineer");
+                console.log("chose an engineer");
+                addEngineer()
                 break;
             case 'add a intern':
                 console.log("chose an intern");
+                addIntern()
                 break;
             default:
                 console.log("chose to finish");
+                generateHTML()
                 break;
         }
     })
