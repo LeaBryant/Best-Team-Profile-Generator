@@ -1,13 +1,28 @@
-const Engineer = require("../lib/Engineer");
+const Engineer = require('../lib/Engineer');
 
-test('Does this create a new engineer object', ()=>{
-    const eng = new Engineer('Name', 2, "test@email.com", "test@github.com")
-    expect(eng.name).toBe('Name')
-    expect(eng.getName()).toBe('Name')
-})
+describe('Engineer', () => {
+    const engineer = new Engineer("Susan", "15", "susan@gmail.com", "susanm9");
+    describe('Initialization', () => {
+        // Positive test
+        it("should create an object with a name, Id, email, and github if provided valid arguments", () => {
+            // Assert
+            expect(engineer.name).toEqual("Susan");
+            expect(engineer.Id).toEqual("15");
+            expect(engineer.email).toEqual("susan@gmail.com");
+            expect(engineer.github).toEqual("susanm9");
+        });
+    });
 
-test('Does this track the employee github', ()=>{
-    const eng =  new Engineer ('Name', 2, "test@email.com", "test@github.com")
-    expect(eng.github).toBe("test@github.com")
-    expect(eng.getGithub()).toBe("test@github.com")
-})
+    describe('getGithub function', () => {
+        it("should return the github", () => {
+            expect(engineer.getGithub()).toEqual("susanm9");
+        });
+    });
+
+    describe('getRole function', () => {
+        it("should return the role", () => {
+            expect(engineer.getRole()).toEqual("Engineer");
+        });
+    });
+
+});

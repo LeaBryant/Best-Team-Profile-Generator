@@ -1,13 +1,33 @@
 const Employee = require("../lib/Employee");
 
-test('Does this track a new employee email', ()=>{
-    const emp =  new Employee('Name', 2, "test@email.com")
-    expect(emp.email).toBe('test@email.com')
-    expect(emp.getEmail()).toBe('test@email.com')
-})
+describe('Employee', () => {  
+  const employee = new Employee("Bob", "12", "bob@gmail.com");
+    describe('Initialization', () => {
+        // Positive test
+        it("should create an object with a name, Id, and email if provided valid arguments",  () => {
+          // Assert
+          expect(employee.name).toEqual("Bob");
+          expect(employee.Id).toEqual("12");
+          expect(employee.email).toEqual("bob@gmail.com");
+        });
+    });
+    
+    describe('getName function', () => {
+      it("should return the name",  () => {
+        expect(employee.getName()).toEqual("Bob");
+      });
+    });
 
-test('Does this track the employee name', ()=>{
-    const emp =  new Employee('Name', 2, "test@email.com")
-    expect(emp.name).toBe('Name')
-    expect(emp.getName()).toBe('Name')
-})
+    describe('getId function', () => {
+      it("should return the Id",  () => {
+        expect(employee.getId()).toEqual("12");
+      });
+    });
+
+    describe('getEmail function', () => {
+      it("should return the email",  () => {
+        expect(employee.getEmail()).toEqual("bob@gmail.com");
+      });
+    });
+
+});
