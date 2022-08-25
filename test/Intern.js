@@ -1,27 +1,11 @@
-const Intern = require('../src/Intern');
+const Intern = require('../lib/Intern');
 
-describe('Intern', () => {
-    const intern = new Intern("Mike", "10", "mike@gmail.com", "ASU");
-    describe('Initialization', () => {
-        it("should create an object with a name, Id, email, and school if provided valid arguments", () => {
-            expect(intern.name).toEqual("Mike");
-            expect(intern.Id).toEqual("10");
-            expect(intern.email).toEqual("mike@gmail.com");
-            expect(intern.school).toEqual("ASU");
-        });
-    });
-
-    describe('getSchool function', () => {
-        it("should return the school", () => {
-            expect(intern.getSchool()).toEqual("ASU");
-        });
-    });
-
-    describe('getRole function', () => {
-        it("should return the role", () => {
-            expect(intern.getRole()).toEqual("Intern");
-        });
-    });
-
+test("add school to intern", () =>  {
+const employee = new Intern('Claire', '12A', 'email', 'school')
+expect (employee.school).toBe('school');
 });
-  
+
+test("the getRole() function should overide and return intern", () => {
+    const employee =  new Intern('Claire', '12A', 'email', 'office', 'school'); 
+    expect(employee.getRole()).toBe("Intern");
+});

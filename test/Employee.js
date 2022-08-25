@@ -7,7 +7,7 @@ describe('Employee', () => {
         it("should create an object with a name, Id, and email if provided valid arguments",  () => {
           // Assert
           expect(employee.name).toEqual("Bob");
-          expect(employee.Id).toEqual("12");
+          expect(employee.employeeID).toEqual("12");
           expect(employee.email).toEqual("bob@gmail.com");
         });
     });
