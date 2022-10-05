@@ -21,24 +21,24 @@ SO THAT I have quick access to their emails and GitHub profiles
 
 ## Installation
 
-First, ensure Node.js JavaScript runtime and npm package manager are installed.
 
-Clone the project repo, then run the following command in a terminal from the root directory:
+The application will be invoked by using the following command:
 
-npm i
+node index.js
 
 Tools used:
 - JavaScript
 - Node.js
-- NPM Inquirer
 - Jest
+- Inquirer
+- CSS/HTML
 
 ## Deployed
 
 ![Screenshot](./Assets/Screen%20Shot%202022-09-19%20at%2010.19.00%20PM.png)
 
-- Link to deployed application: https://damp-chamber-96196.herokuapp.com/
-- Link to Repo :https://github.com/LeaBryant/Text-Editor 
+- Link to deployed application video: 
+
 
 ## Contributing
 
