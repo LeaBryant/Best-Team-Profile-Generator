@@ -1,6 +1,4 @@
 # Best-Team-Profile-Generator
-<!-- 
-  ![license badge](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white) -->
 
 ## Description
 This Object-Oriented Programming: Team Profile Generator
@@ -35,9 +33,7 @@ Tools used:
 
 ## Deployed
 
-![Screenshot](./Assets/Screen%20Shot%202022-09-19%20at%2010.19.00%20PM.png)
-
-- Link to deployed application video: 
+- Link to deployed application video: https://drive.google.com/file/d/1ueivbU1OgV0C2Ecki--hVerF47yURY95/view
 
 
 ## Contributing
